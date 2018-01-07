@@ -1,1 +1,1 @@
-web: gunicorn herokuTesting.herokuTesting.wsgi.application
+web: gunicorn herokuDeployment.wsgi
