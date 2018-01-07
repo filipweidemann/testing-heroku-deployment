@@ -1,1 +1,0 @@
-web: gunicorn herokuTesting.herokuTesting.wsgi
