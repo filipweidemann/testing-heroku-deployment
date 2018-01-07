@@ -1,1 +1,1 @@
-web: gunicorn herokuTesting.wsgi
+web: gunicorn herokuTesting.wsgi --preload
