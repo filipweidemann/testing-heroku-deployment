@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'herokuTesting.urls'
+ROOT_URLCONF = 'herokuDeployment.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'herokuTesting.wsgi.application'
+WSGI_APPLICATION = 'herokuDeployment.wsgi.application'
 
 
 # Database
