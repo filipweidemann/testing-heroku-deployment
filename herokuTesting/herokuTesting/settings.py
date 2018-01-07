@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'herokuTesting.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-
+    'default': {}
 }
 
 db_from_env = dj_database_url.config(conn_max_age=500)
