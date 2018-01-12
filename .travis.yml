@@ -3,14 +3,13 @@ python:
   - '3.6'
 env:
   - DJANGO_SETTINGS_MODULE=django_heroku.settings
-  - TRAVIS=true
 before_install:
   - export DJANGO_SETTINGS_MODULE=django_heroku.settings
 install:
   - pip install pipenv
   - pipenv install
 script:
-  - pytest --ds=$DJANGO_SETTINGS_MODULE
+  - pytest --ds=django_heroku.settings
 deploy:
   provider: heroku
   api_key:
