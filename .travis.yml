@@ -2,14 +2,17 @@ language: python
 python:
   - '3.6'
 before_install:
-  - export DJANGO_SETTINGS_MODULE=django_heroku.settings
-  - export PYTHONPATH=$HOME/builds/fweidemann14/testing-heroku-deployment
+  - DJANGO_SETTINGS_MODULE="django_heroku.settings"
+  - PYTHONPATH="/home/travis/build/fweidemann14/testing-heroku-deployment"
+  - PIP_USE_MIRRORS=true
+  - BUILD_ON_TRAVIS=true
 install:
   - pip install pipenv
   - pipenv install
 script:
   - ./manage.py makemigrations
   - ./manage.py migrate
+  - ./manage.py syncdb --noinput
   - pytest
 deploy:
   provider: heroku
