@@ -1,12 +1,14 @@
 language: python
 python:
   - '3.6'
-env:
-  - DJANGO_SETTINGS_MODULE=django_heroku.settings
+before_install:
+  - export DJANGO_SETTINGS_MODULE=django_heroku.settings
+  - export PYTHONPATH=$HOME/builds/fweidemann14/testing-heroku-deployment
 install:
   - pip install pipenv
   - pipenv install
 script:
+  - python django_heroku/setup_travis.py
   - pytest
 deploy:
   provider: heroku
