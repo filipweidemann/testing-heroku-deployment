@@ -11,9 +11,6 @@ install:
   - pipenv install
 script:
   - python manage.py shell
-  - import django
-  - django.setup()
-  - exit()
   - pytest
 deploy:
   provider: heroku
