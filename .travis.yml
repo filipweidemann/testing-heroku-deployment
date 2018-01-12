@@ -10,9 +10,10 @@ install:
   - pip install pipenv
   - pipenv install
 script:
-  - ./manage.py makemigrations
-  - ./manage.py migrate
-  - ./manage.py syncdb --noinput
+  - python manage.py shell
+  - import django
+  - django.setup()
+  - exit()
   - pytest
 deploy:
   provider: heroku
