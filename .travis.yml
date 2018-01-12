@@ -8,8 +8,7 @@ install:
   - pip install pipenv
   - pipenv install
 script:
-  - python django_heroku/setup_travis.py
-  - pytest
+  - ./manage.py test
 deploy:
   provider: heroku
   api_key:
