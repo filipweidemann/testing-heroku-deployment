@@ -30,6 +30,7 @@ DEBUG = True
 
 INSTALLED_APPS = [
     'blog.apps.BlogConfig',
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,8 +40,7 @@ INSTALLED_APPS = [
     # greater consistency between gunicorn and `./manage.py runserver`. See:
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
-    'django.contrib.staticfiles',
-    'rest_framework'
+    'django.contrib.staticfiles'
 ]
 
 MIDDLEWARE = [
