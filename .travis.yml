@@ -8,7 +8,9 @@ install:
   - pip install pipenv
   - pipenv install
 script:
-  - ./manage.py test
+  - ./manage.py makemigrations
+  - ./manage.py migrate
+  - pytest
 deploy:
   provider: heroku
   api_key:
