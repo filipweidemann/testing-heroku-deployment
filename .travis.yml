@@ -6,7 +6,6 @@ env:
 install:
   - pip install pipenv
   - pipenv install
-  - django-admin.py shell --settings=django_heroku.settings
 script:
   - pytest
 deploy:
