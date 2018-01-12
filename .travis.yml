@@ -1,6 +1,8 @@
 language: python
 python:
   - '3.6'
+env:
+  - DJANGO_SETTINGS_MODULE=django_heroku.settings
 install:
   - pip install pipenv
   - pipenv install
