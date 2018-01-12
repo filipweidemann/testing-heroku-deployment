@@ -3,14 +3,10 @@ python:
   - '3.6'
 before_install:
   - DJANGO_SETTINGS_MODULE="django_heroku.settings"
-  - PYTHONPATH="/home/travis/build/fweidemann14/testing-heroku-deployment"
-  - PIP_USE_MIRRORS=true
-  - BUILD_ON_TRAVIS=true
 install:
   - pip install pipenv
   - pipenv install
 script:
-  - python manage.py shell
   - pytest
 deploy:
   provider: heroku
