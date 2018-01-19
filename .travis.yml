@@ -10,6 +10,7 @@ install:
   - pipenv install
 script:
   - pytest --ds=django_heroku.settings
+  - echo test
 deploy:
   provider: heroku
   api_key:
