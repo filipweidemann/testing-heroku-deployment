@@ -8,6 +8,9 @@ from .serializers import TestSerializer
 def index(request):
     return HttpResponse("Triggering first Travis build.")
 
+def random(request):
+    return HttpResponse("Random route")
+
 class TestView(viewsets.ModelViewSet):
     queryset = Test.objects.all()
     serializer_class = TestSerializer

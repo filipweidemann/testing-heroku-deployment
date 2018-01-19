@@ -8,5 +8,6 @@ router.register(r'tests', views.TestView)
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('/random', views.random, name='random'),
     path('router/', include(router.urls))
 ]
